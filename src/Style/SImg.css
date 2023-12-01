@@ -1,0 +1,23 @@
+.ImgS {
+  display: flex;
+  width: 250px;
+  height: 150px;
+  border-radius: 30px;
+  position: absolute;
+}
+
+.divImg {
+  position: relative;
+  display: flex;
+  width: 250px;
+  height: 150px; 
+}
+
+.imgText {
+  position: absolute;
+  width: auto;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

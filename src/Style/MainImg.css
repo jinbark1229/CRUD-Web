@@ -1,0 +1,38 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  margin-left:150px;
+
+}
+
+.baner {
+  position: relative;
+}
+
+p {
+  width: 300px;
+  margin-Left: 250px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
+}
+
+.cursorDiv {
+  position: absolute;
+  top: 85%;
+  right: 26%;
+}
+
+.cursor {
+  margin-left: 15px;
+  width: 35px;
+  cursor: pointer;
+}
