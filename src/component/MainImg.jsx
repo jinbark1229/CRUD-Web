@@ -69,7 +69,7 @@ function RCursor(){
                 <SImg src="/img/alps.png" text="ALPS란?"></SImg>
                 <SImg src="/img/marine.png" text="수산물 정보"></SImg>
                 <SImg src="/img/new.png" text="최신동향"></SImg>
-                <SImg src="/img/new.png" text="참고사이트"></SImg>
+                <SImg src="/img/ocean.png" text="참고사이트"></SImg>
             </div>
         </div>
     </div>
