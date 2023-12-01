@@ -1,5 +1,10 @@
 .topBanner{
-display: flex;
-justify-content: baseline;
-
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+.topBanner span{
+  font-size: 32px;
+  margin-left: 12px;
 }
