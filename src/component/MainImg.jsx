@@ -5,6 +5,8 @@ import "../Style/Slogan.css";
 import NoteBoard from "./NoteBoard";
 import Slogan from "./Slogan";
 import SImg from "./SImg";
+import { Link } from "react-router-dom";
+
 
 
 function MainImg() {
@@ -43,6 +45,7 @@ function MainImg() {
         }
     }
 
+
     return (
 
 
@@ -70,10 +73,10 @@ function MainImg() {
             {/* 퀵메뉴 */}
             <div className="quick">
                 <div className="AppImg">
-                    <SImg src="/img/alps.png" text="ALPS란?"></SImg>
-                    <SImg src="/img/marine.png" text="수산물 정보"></SImg>
-                    <SImg src="/img/new.png" text="최신동향"></SImg>
-                    <SImg src="/img/ocean.png" text="참고사이트"></SImg>
+                    <Link to="Alps"><SImg src="/img/alps.png" text="ALPS란?" ></SImg></Link>
+                    <Link to="Seafood"><SImg src="/img/marine.png" text="수산물 정보" ></SImg></Link>
+                    <Link to="New"><SImg src="/img/new.png" text="최신동향"></SImg></Link>
+                    <Link to="Reference"><SImg src="/img/ocean.png" text="참고사이트"></SImg></Link>
                 </div>
             </div>
         </div>
