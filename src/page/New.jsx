@@ -33,19 +33,14 @@ function New() {
   return (
     <div>
       <Link to="/"><Slogan></Slogan></Link>
-      <div className="topBaner">
+
+      <SubImg src="/img/waterBanner.png" text="최신동향"></SubImg>
+      <div className="subAll">
+      <div className="subMenu">
         <Link to="/Alps">ALPS?</Link><br/>
         <Link to="/Seafood">수산물 정보</Link><br/>
-        <Link to="/Reference">참고사이트</Link>
-      </div>
-      <SubImg src="/img/new.png" text="관리"></SubImg>
-      <div className="subAll">
-        <div className="subMenu">
-          <div className="menu">메뉴</div>{" "}
-          <div className="process">처리과정</div>{" "}
-          <div className="manage">관리</div>{" "}
-          <div className="news">관련 기사</div>{" "}
-        </div>
+        <Link to="/New">최신동향</Link><br/>
+        <Link to="/Reference">참고사이트</Link></div>
         <div className="subText">
           <p>
             해양수산부에서는 국민들의 궁금한 점이나 청원사항을 게시판을 통해 수용하여

@@ -2,7 +2,7 @@ import React from "react";
 import MainImg from "./component/MainImg";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import MainBoard from "./component/MainBoard";
+
 import SLPS from "./page/SLPS";
 import Seafood from "./page/Seafood";
 import New from "./page/New";
@@ -12,7 +12,6 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<MainImg/>} />
-        <Route path="/Board" element={<MainBoard />} />
         <Route path="/Alps" element={<SLPS/>}></Route>
         <Route path="/Seafood" element={<Seafood/>}></Route>
         <Route path="/New" element={<New/>}></Route>

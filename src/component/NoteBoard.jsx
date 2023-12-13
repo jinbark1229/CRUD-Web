@@ -22,7 +22,7 @@ function NoteBoard() {
   }, []);
   return (
     <div className="notice">
-      <Link to="Board">+더보기</Link>
+
       {data ? (
         <div>
           <table border={1}>

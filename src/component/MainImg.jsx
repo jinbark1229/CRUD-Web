@@ -25,25 +25,25 @@ function MainImg() {
         const discharge = new Date("2023-11-20");
         const today = new Date();
 
-        const diffTime = today-discharge ;
+        const diffTime = today - discharge;
         const Days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    
+
         setDday(Days);
     }, []);
-    
+
 
     const indexs = [
-        "/img/Banner.png",
+        "/img/newAlps.png",
         (
             <span>
-                    오염수 3차 방류 
-                    <span style={{ color: 'red' }}>D+{Dday}</span>
-                    일째입니다. 과연 우리의 해양은 안전할까요?
-                </span>
+                오염수 3차 방류
+                <span style={{ color: 'red' }}>D+{Dday}</span>
+                일째입니다. 과연 우리의 해양은 안전할까요?
+            </span>
         ),
         "/img/fish.png",
-        (<span style={{color:"orange"}}>
-            건강한 우리바다<br/> 안전한 우리식탁
+        (<span style={{ color: "orange" }}>
+            건강한 우리바다<br /> 안전한 우리식탁
         </span>)
     ];
 
@@ -90,9 +90,9 @@ function MainImg() {
             <div className="quick">
                 <div className="AppImg">
                     <Link className="divImg" to="Alps"><SImg src="/img/alps.png" text="ALPS란?" ></SImg></Link>
-                    <Link className="divImg" to="Seafood"><SImg src="/img/marine.png" text="수산물 정보" ></SImg></Link>
-                    <Link className="divImg" to="New"><SImg src="/img/new.png" text="최신동향"></SImg></Link>
-                    <Link className="divImg" to="Reference"><SImg src="/img/ocean.png" text="참고사이트"></SImg></Link>
+                    <Link className="divImg" to="Seafood"><SImg src="/img/garib.png" text="수산물 정보" ></SImg></Link>
+                    <Link className="divImg" to="New"><SImg src="/img/water.png" text="최신동향"></SImg></Link>
+                    <Link className="divImg" to="Reference"><SImg src="/img/marine.png" text="참고사이트"></SImg></Link>
                 </div>
             </div>
         </div>
