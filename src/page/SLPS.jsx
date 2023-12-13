@@ -20,9 +20,6 @@ function SLPS() {
     }
   }
 
-
-
-
   return (
     <div id="slpsComponent">
       <Slogan></Slogan>
@@ -57,7 +54,7 @@ function SLPS() {
             국내 규제 승인을 받아 ALPS 처리수를 처리하는 방침을 발표했습니다.
           </p>
           <p>
-            트리튬 이외의 방사성 물질 농도가 국가 기준을 충족시킬 때까지 재정화 처리하고 트리튬의 규제 기준을
+            <span className="Tritium">트리튬</span> 이외의 방사성 물질 농도가 국가 기준을 충족시킬 때까지 재정화 처리하고 <span className="Tritium">트리튬</span> 의 규제 기준을
             충분히 충족시키도록 해수로 희석하는 것이 해양 방출 공정입니다.
           </p>
 
@@ -74,7 +71,7 @@ function SLPS() {
           <li><span onClick={Mark("suso")}>삼중수소</span>: 세 개의 수소 원자로 이루어진 분자</li>
           <li><span onClick={Mark("dongwi")}>동위원소</span>: 같은 원소이지만 중성자의 수가 서로 다른 원자의 형태를</li>
           <li><span onClick={Mark("hakyun")}>핵융합 시설</span>: 두 가지 가벼운 원자핵이 융합하여 에너지를 생성하는 시설</li>
-          <li><span onClick={Mark("tridium")}>트리듐</span>:수소의 동위원소로, 핵융합 연구에서 사용되며, 중성자 발생과 깨끗한 에너지 생성에 관심을 받는 원소</li>
+          <li><span onClick={Mark("Tritium")}>트리튬</span>:수소의 동위원소로, 핵융합 연구에서 사용되며, 중성자 발생과 깨끗한 에너지 생성에 관심을 받는 원소</li>
         </p>
 
 
