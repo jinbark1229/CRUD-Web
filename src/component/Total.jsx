@@ -10,7 +10,7 @@ function Total() {
                 // 서버에서 데이터를 가져오는 엔드포인트로 요청
                 const response = await axios.get('http://localhost:4001/getData');
                 setData(response.data);
-                console.log(response)
+                // console.log(response)
 
             } catch (error) {
                 console.error('Error fetching data:', error);

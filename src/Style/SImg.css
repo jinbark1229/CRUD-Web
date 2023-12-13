@@ -11,7 +11,7 @@
 .divImg {
   position: relative;
   display: flex;
-  width: calc(25% - 25px);
+  width: calc(25% - 40px);
   border-radius: 30px;
   overflow: hidden;
 }

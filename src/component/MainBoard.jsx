@@ -31,7 +31,7 @@ function MainBoard() {
     const localData = localStorage.getItem("memos")
     if (localData !== null) {
       const JData = JSON.parse(localData);
-      console.log(JData.length)
+      // console.log(JData.length)
       setMemo(JData)
     }
   }, [])

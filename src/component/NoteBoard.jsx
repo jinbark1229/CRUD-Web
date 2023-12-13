@@ -10,7 +10,7 @@ function NoteBoard() {
         // 서버에서 데이터를 가져오는 엔드포인트로 요청
         const response = await axios.get('http://localhost:4001/getData');
         setData(response.data);
-        console.log(response)
+        // console.log(response)
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -35,14 +35,13 @@ function NoteBoard() {
                 <th>금일 검사 수<br />{data.response.body.items.item.dailyTotCnt._text}</th>
                 <th>누적 검사 수<br />{data.response.body.items.item.accumulateTotCnt._text}</th>
               </tr>
-
               <tr>
                 <th>금일 통과 수<br />{data.response.body.items.item.dailyPassCnt._text}</th>
                 <th>누적 통과 수<br />{data.response.body.items.item.accumulatePassCnt._text}</th>
               </tr>
               <tr>
-                <td>금일 부적합 판정 건수<br />{data.response.body.items.item.dailyFailCnt._text}</td>
-                <td>누적 부적합 판정 건수<br />{data.response.body.items.item.accumulateFailCnt._text}</td>
+                <th>금일 부적합 판정 건수<br />{data.response.body.items.item.dailyFailCnt._text}</th>
+                <th>누적 부적합 판정 건수<br />{data.response.body.items.item.accumulateFailCnt._text}</th>
               </tr>
             </tbody>
           </table>

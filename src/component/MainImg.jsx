@@ -15,7 +15,7 @@ function MainImg() {
     useEffect(() => {
         const interval = setInterval(() => {
             setBanner((prevBanner) => (prevBanner + 2) % 4);
-        }, 5000);
+        }, 8000);
         return () => clearInterval(interval);
     }, []);
 
@@ -41,8 +41,10 @@ function MainImg() {
                     일째입니다. 과연 우리의 해양은 안전할까요?
                 </span>
         ),
-        "/img/fish.jpg",
-        "냠냠"
+        "/img/fish.png",
+        (<span style={{color:"orange"}}>
+            건강한 우리바다<br/> 안전한 우리식탁
+        </span>)
     ];
 
     function LCursor() {
@@ -62,7 +64,6 @@ function MainImg() {
             setBanner(+2)
         }
     }
-
 
     return (
         <div className="Container">
