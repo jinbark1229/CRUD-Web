@@ -2,10 +2,16 @@ import React from "react";
 import SubImg from "../component/SubImg";
 import Slogan from "../component/Slogan";
 import "../Style/Subpage.css";
+import { Link } from "react-router-dom";
 function Reference() {
   return (
     <div>
-      <Slogan></Slogan>
+      <Link to="/"><Slogan></Slogan></Link>
+      <div className="topBaner">
+        <Link to="/Alps">ALPS?</Link><br/>
+        <Link to="/Seafood">수산물 정보</Link><br/>
+        <Link to="/New">최신동향</Link>
+      </div>
       <SubImg src="/img/allps.png" text="ALPS란?"></SubImg>
       <div style={{ display: "flex" }}>
       <div className="subMenu"><div className="menu">메뉴</div> <div className="process">처리과정</div> <div className="manage">관리</div> <div className="news">관련 기사</div> </div>

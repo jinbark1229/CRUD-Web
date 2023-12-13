@@ -3,6 +3,8 @@ import Slogan from "../component/Slogan";
 import SubImg from "../component/SubImg";
 import "../Style/MainImg.css";
 import "../Style/Subpage.css";
+import { Link } from "react-router-dom";
+
 
 function SLPS() {
   function Mark(Name) {
@@ -22,10 +24,18 @@ function SLPS() {
 
   return (
     <div id="slpsComponent">
-      <Slogan></Slogan>
+      <Link to="/"><Slogan></Slogan></Link>
+      <div className="topBaner">
+        <Link to="/Seafood">수산물 정보</Link><br/>
+        <Link to="/New">최신동향</Link><br/>
+        <Link to="/Reference">참고사이트</Link>
+      </div>
       <SubImg src="/img/allps.png" text="ALPS란?"></SubImg>
       <div className="subAll">
-        <div className="subMenu"><div className="menu">메뉴</div> <div className="process">처리과정</div> <div className="manage">관리</div> <div className="news">관련 기사</div> </div>
+        <div className="subMenu"><div className="menu">ALPS</div>
+          <div className="process">왜 제거할 수 없는가?</div>
+          <div className="manage">ALPS 처리수의 관리</div>
+          <div className="news">관련 기사</div> </div>
         <div className="subText">
           <h1>Advanced Liquid Processing System</h1>
           <p>
@@ -38,7 +48,7 @@ function SLPS() {
             왜 제거할 수 없는가?
           </h3><br />
 
-          <p>물에서 <span className="suso">삼중수소</span>를 제거하는 것은 기술적으로 매우 어렵습니다. <span className="suso">삼중수소</span>는 수소의<span className="dongwi">동위원소</span>이며, 삼중수소를
+          <p>물에서 <span className="suso">삼중수소</span>를 제거하는 것은 기술적으로 매우 어렵습니다. <span className="suso">삼중수소</span>는 수소의 <span className="dongwi">동위원소</span>이며, 삼중수소를
             함유한 물을 일반 수소를 함유한 물과 거의 동일한 화학적 특징을 가지고 있습니다.
             <span className="suso">삼중수소</span>가 소량의 물에 고농축되었을 경우 <span className="hakyun">핵융합 시설</span>에서 회수할 수 있는 기술이 존재하지만, 후쿠시마 제1원전의
             오염수는 <span className="suso">삼중수소</span>의 농도가 낮아 기술을 적용할 수 없습니다.
@@ -54,7 +64,7 @@ function SLPS() {
             국내 규제 승인을 받아 ALPS 처리수를 처리하는 방침을 발표했습니다.
           </p>
           <p>
-            <span className="Tritium">트리튬</span> 이외의 방사성 물질 농도가 국가 기준을 충족시킬 때까지 재정화 처리하고 <span className="Tritium">트리튬</span> 의 규제 기준을
+            <span className="Tritium">트리튬</span> 이외의 방사성 물질 농도가 국가 기준을 충족시킬 때까지 재정화 처리하고 <span className="Tritium">트리튬</span>의 규제 기준을
             충분히 충족시키도록 해수로 희석하는 것이 해양 방출 공정입니다.
           </p>
 
