@@ -39,4 +39,9 @@
   font-size: 24px;
   color: #fff;
   z-index: 2;
+  transition: color 0.5s ease;
+}
+
+.imgText:hover {
+  color: orange;
 }
