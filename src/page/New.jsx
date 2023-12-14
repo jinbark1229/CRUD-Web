@@ -3,6 +3,7 @@ import SubImg from "../component/SubImg";
 import Slogan from "../component/Slogan";
 import "../Style/MainImg.css";
 import "../Style/Subpage.css";
+import "../Style/Acolor.css";
 import Iframe from "react-iframe";
 import { Link } from "react-router-dom";
 

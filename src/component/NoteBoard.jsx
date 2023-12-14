@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "../Style/MainImg.css";
 
 function NoteBoard() {
   const [data, setData] = useState(null);
@@ -22,26 +22,27 @@ function NoteBoard() {
   }, []);
   return (
     <div className="notice">
-
       {data ? (
         <div>
-          <table border={1}>
+          <table className='apiBoard'border={0}>
+            <thead>
+              <tr>
+                <th><span>일일현황<br/>{data.response.body.items.item.dailyDate._text}</span></th>
+                <th><span>누적현황<br/>{data.response.body.items.item.accumulateYear._text}</span></th>
+              </tr>
+            </thead>
             <tbody>
               <tr>
-                <th>일일현황{data.response.body.items.item.dailyDate._text}</th>
-                <th>누적현황{data.response.body.items.item.accumulateYear._text}</th>
+                <td><span className='apitit'>금일 검사 수</span><br /><span className='apiresult'>{data.response.body.items.item.dailyTotCnt._text}</span></td>
+                <td><span className='apitit'>누적 검사 수</span><br /><span className='apiresult'>{data.response.body.items.item.accumulateTotCnt._text}</span></td>
               </tr>
               <tr>
-                <th>금일 검사 수<br />{data.response.body.items.item.dailyTotCnt._text}</th>
-                <th>누적 검사 수<br />{data.response.body.items.item.accumulateTotCnt._text}</th>
+                <td><span className='apitit'>금일 통과 수</span><br /><span className='apiresult'>{data.response.body.items.item.dailyPassCnt._text}</span></td>
+                <td><span className='apitit'>누적 통과 수</span><br /><span className='apiresult'>{data.response.body.items.item.accumulatePassCnt._text}</span></td>
               </tr>
               <tr>
-                <th>금일 통과 수<br />{data.response.body.items.item.dailyPassCnt._text}</th>
-                <th>누적 통과 수<br />{data.response.body.items.item.accumulatePassCnt._text}</th>
-              </tr>
-              <tr>
-                <th>금일 부적합 판정 건수<br />{data.response.body.items.item.dailyFailCnt._text}</th>
-                <th>누적 부적합 판정 건수<br />{data.response.body.items.item.accumulateFailCnt._text}</th>
+                <td><span className='apitit'>금일 부적합 판정 건수</span><br /><span className='apiresult'>{data.response.body.items.item.dailyFailCnt._text}</span></td>
+                <td><span className='apitit'>누적 부적합 판정 건수</span><br /><span className='apiresult'>{data.response.body.items.item.accumulateFailCnt._text}</span></td>
               </tr>
             </tbody>
           </table>
@@ -49,8 +50,6 @@ function NoteBoard() {
       ) : (
         <p>Loading...</p>
       )}
-
-
     </div>)
 }
 

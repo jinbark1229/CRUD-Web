@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "../Style/MainImg.css";
 import "../Style/Slogan.css";
+import "../Style/Acolor.css";
 import NoteBoard from "./NoteBoard";
 import Slogan from "./Slogan";
 import SImg from "./SImg";
@@ -35,14 +36,14 @@ function MainImg() {
     const indexs = [
         "/img/newAlps.png",
         (
-            <span>
+            <span style={{fontWeight:"bold"}}>
                 오염수 3차 방류
-                <span style={{ color: 'red' }}>D+{Dday}</span>
-                일째입니다. 과연 우리의 해양은 안전할까요?
+                <span style={{ color: 'red', fontWeight:"bold" }}> D+{Dday} </span>
+                일째입니다. <br/>과연 우리의 해양은 안전할까요?
             </span>
         ),
         "/img/fish.png",
-        (<span style={{ color: "orange" }}>
+        (<span style={{ color: "white", fontWeight:"bold" }}>
             건강한 우리바다<br /> 안전한 우리식탁
         </span>)
     ];

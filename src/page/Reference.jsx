@@ -2,19 +2,30 @@ import React from "react";
 import SubImg from "../component/SubImg";
 import Slogan from "../component/Slogan";
 import "../Style/Subpage.css";
+import "../Style/Acolor.css";
 import { Link } from "react-router-dom";
+import { useState,useEffect } from "react";
 function Reference() {
+const [barScroll,SetBarScroll]=useState(0)
+
+useEffect(()=>{
+
+},[])
+
+
+
   return (
     <div>
       <Link to="/"><Slogan></Slogan></Link>
 
       <SubImg src="/img/www.png" text="참고 사이트"></SubImg>
-      <div style={{ display: "flex" }}>
-      <div className="subMenu">
-        <Link to="/Alps">ALPS?</Link><br/>
-        <Link to="/Seafood">수산물 정보</Link><br/>
-        <Link to="/New">최신동향</Link><br/>
-        <Link to="/Reference">참고사이트</Link></div>
+      <div className="subAll">
+        <div className="subMenu">
+          <Link to="/Alps">ALPS?</Link><br/>
+          <Link to="/Seafood">수산물 정보</Link><br/>
+          <Link to="/New">최신동향</Link><br/>
+          <Link to="/Reference">참고사이트</Link>
+        </div>
         <div className="subText">
           <h1>참고할 사이트-사이트맵</h1>
               <br/>
@@ -40,7 +51,8 @@ function Reference() {
           <li>국내유통식품방사능검사현황 <a href="https://radsafe.mfds.go.kr/CFQDD04F02/getCntntsDetail?page=1&limit=10&cntntsView=list&cntntsSn=549217&searchCondition=&searchInpText=">https://radsafe.mfds.go.kr/CFQDD04F02/getCntntsDetail...</a></li>
           <hr />
           </div>
-        </div></div>
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,14 @@
+.Board {
+  width: 100%;
+  min-width: 1000px;
+  max-width: 1000px;
+  height: 450px;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.BoardBottom{
+  display: flex;
+  flex-direction: row-reverse;
+}
+

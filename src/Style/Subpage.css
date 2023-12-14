@@ -23,12 +23,12 @@ body {font-size: 18px;letter-spacing: -.5px;font-family: 'EASTARJET-Heavy';backg
 
 .subMenu{
   width: 10%;
+  height: 700px;
   border: 0px solid black;
   background-color: white;
   display: grid;
   align-items: center;
   text-align: center;
-  vertical-align: middle;
   font-size: 23px;
 }
 
@@ -38,3 +38,9 @@ body {font-size: 18px;letter-spacing: -.5px;font-family: 'EASTARJET-Heavy';backg
   font-size: 25px;
   padding: 60px 0 ;
 }
+
+.subWord{
+  width: 80%;
+  margin-left: 15%;
+}
+

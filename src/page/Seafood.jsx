@@ -2,6 +2,7 @@ import React from "react";
 import SubImg from "../component/SubImg";
 import Slogan from "../component/Slogan";
 import "../Style/Subpage.css";
+import "../Style/Acolor.css";
 import { Link } from "react-router-dom";
 
 
@@ -71,6 +72,7 @@ function Seafood() {
         <div className="word">
         <br />
         <br />
+        <div className="subWord">
         <p >
           당신이 몰랐던 단어
           <li><span onClick={Mark("suso")}>삼중수소</span>:세 개의 수소 원자로 이루어진 분자</li>
@@ -79,6 +81,7 @@ function Seafood() {
           <li><span onClick={Mark("sasum")}>세슘</span>: 두 가지 가벼운 원자핵이 융합하여 에너지를 생성하는 시설</li>
           <li><span onClick={Mark("gansey")}>관세청</span>:국가의 수입·수출 및 관세 정책을 담당하며, 무역 활동과 관련된 업무를 수행하는 행정 기관</li>
         </p>
+        </div>
       </div>
     </div>
   )
