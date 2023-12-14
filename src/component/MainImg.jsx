@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 
 function MainImg() {
     const [banner, setBanner] = useState(0);
+    
 
     useEffect(() => {
         const interval = setInterval(() => {

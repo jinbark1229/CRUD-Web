@@ -8,7 +8,10 @@ function NoteBoard() {
     const fetchData = async () => {
       try {
         // 서버에서 데이터를 가져오는 엔드포인트로 요청
-        const response = await axios.get('http://localhost:4001/getData');
+        const response = await axios.get('http://localhost:4001/getData', {
+    withCredentials: true,
+});
+
         setData(response.data);
         // console.log(response)
       } catch (error) {

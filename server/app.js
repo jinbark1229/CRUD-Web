@@ -8,7 +8,7 @@ const convert = require('xml-js');
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://golden-bavarois-4b989f.netlify.app'],
     methods: 'GET, POST, PUT, DELETE',
     credentials: true,
 }));
@@ -23,6 +23,7 @@ app.get('/getData', async (req, res) => {
                 cert_key: apiKey,
                 inspType: '01',
             },
+            withCredentials: true,
         });
 
         const jsonData = convert.xml2json(response.data, { compact: true, spaces: 4 });
