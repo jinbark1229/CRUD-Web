@@ -30,6 +30,7 @@ body {font-size: 18px;letter-spacing: -.5px;font-family: 'EASTARJET-Heavy';backg
   align-items: center;
   text-align: center;
   font-size: 23px;
+  border-radius: 30px;
 }
 
 .subText{
@@ -43,4 +44,12 @@ body {font-size: 18px;letter-spacing: -.5px;font-family: 'EASTARJET-Heavy';backg
   width: 80%;
   margin-left: 15%;
 }
+.words{
+color: orange;
+transition: color 0.5s ease;
+cursor: pointer;
+}
 
+.words:hover {
+  color: blue;
+}

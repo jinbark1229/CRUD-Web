@@ -10,10 +10,18 @@ import { Link } from "react-router-dom";
 function New() {
   const [scroll, setScroll] = useState(0);
   const [yes, setYes] = useState("yes");
-
+const [barScroll,setBarScroll]=useState(0);
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
+      if (currentScroll - 300 < 0) {
+        setBarScroll(0)
+      } else {
+        setBarScroll(currentScroll - 300);
+      }
+
+
+
       setScroll(currentScroll);
     };
     window.addEventListener("scroll", handleScroll);
@@ -23,7 +31,6 @@ function New() {
   }, []);
 
   useEffect(() => {
-    // 스크롤 값에 따라 yes 상태를 업데이트
     if (scroll > 500) {
       setYes("yes");
     } else {
@@ -31,13 +38,17 @@ function New() {
     }
   }, [scroll]);
 
+
+
+
+
   return (
     <div>
       <Link to="/"><Slogan></Slogan></Link>
 
       <SubImg src="/img/waterBanner.png" text="최신동향"></SubImg>
       <div className="subAll">
-      <div className="subMenu">
+      <div className="subMenu" style={{marginTop:barScroll}}>
         <Link to="/Alps">ALPS?</Link><br/>
         <Link to="/Seafood">수산물 정보</Link><br/>
         <Link to="/New">최신동향</Link><br/>
@@ -55,6 +66,7 @@ function New() {
             width="1440px"
             height="900"
             scrolling={yes}
+            styles={{ border: '2px solid gray', borderRadius: '30px' }} 
           />
         </div>
       </div>

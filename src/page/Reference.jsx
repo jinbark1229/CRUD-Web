@@ -4,13 +4,9 @@ import Slogan from "../component/Slogan";
 import "../Style/Subpage.css";
 import "../Style/Acolor.css";
 import { Link } from "react-router-dom";
-import { useState,useEffect } from "react";
+
 function Reference() {
-const [barScroll,SetBarScroll]=useState(0)
 
-useEffect(()=>{
-
-},[])
 
 
 
