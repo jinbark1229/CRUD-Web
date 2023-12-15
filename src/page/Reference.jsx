@@ -4,6 +4,7 @@ import Title from "../component/Title";
 import "../Style/Subpage.css";
 import "../Style/TagColor.css";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function Reference() {
 
@@ -13,13 +14,32 @@ function Reference() {
     marginBottom: '15px',
   };
 
+  const [scroll, setScroll] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll - 300 < 0) {
+        setScroll(0)
+      } else {
+        setScroll(currentScroll - 300);
+      }
+
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+
   return (
     <div>
       <Link to="/"><Title></Title></Link>
 
       <SubBanner src="/img/SubBanner4.png" text="참고 사이트"></SubBanner>
       <div className="subAll">
-        <div className="subMenu">
+        <div className="subMenu" style={{ marginTop: scroll }}>
           <Link to="/Alps">ALPS?</Link><br />
           <Link to="/Seafood">수산물 정보</Link><br />
           <Link to="/LatestTrends">최신동향</Link><br />
