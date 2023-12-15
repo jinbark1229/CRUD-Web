@@ -7,8 +7,7 @@
   margin: 0 auto;
 }
 
-.BoardBottom{
+.BoardBottom {
   display: flex;
   flex-direction: row-reverse;
 }
-
